@@ -12,7 +12,7 @@ class DataSource{
                 MainResponse(
                     "Congratulations!",
                     "You made it to the end of the course!\r\n\r\nNext we'll be building the REST API!",
-                    "https://github.com/AndroidDeveloperSanjar/Recycler-View-Example-Kotlin/blob/master/app/src/main/res/mipmap-hdpi/Sanjar%20Karimov.png",
+                    "https://github.com/AndroidDeveloperSanjar/Recycler-View-Example-Kotlin/blob/master/app/src/main/res/mipmap-hdpi/sanjar.png",
                     "Sally"
                 )
             )
