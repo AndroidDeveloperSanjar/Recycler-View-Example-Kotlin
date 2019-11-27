@@ -4,8 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.example.kotlinrecyclerviewexample.R
 import com.example.kotlinrecyclerviewexample.data.model.MainResponse
 import kotlinx.android.synthetic.main.main_item_list.view.*
@@ -42,20 +40,18 @@ class MainRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
         itemView: View
     ): RecyclerView.ViewHolder(itemView) {
 
-        private val imageview = itemView.image_view
-        private val title = itemView.tv_title
-        private val username = itemView.tv_full_name
+        private val type = itemView.tv_type
+        private val region = itemView.tv_region
+        private val year = itemView.tv_year
+        private val name = itemView.tv_name
+        private val work = itemView.tv_work
 
         fun bind(mainResponse: MainResponse) {
-            val requestOptions = RequestOptions()
-                .placeholder(R.drawable.icon_progress)
-                .error(R.drawable.icon_progress)
-            Glide.with(itemView.context)
-                .applyDefaultRequestOptions(requestOptions)
-                .load(mainResponse.image)
-                .into(imageview)
-            title.text = mainResponse.title
-            username.text = mainResponse.username
+            type.text = mainResponse.type
+            region.text = mainResponse.region
+            year.text = mainResponse.year
+            name.text = mainResponse.name
+            work.text = mainResponse.work
         }
     }
 }

@@ -1,66 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-    android:layout_marginStart="10dp"
-    android:layout_marginEnd="10dp"
+    android:layout_margin="10dp"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="10dp"
-    app:cardCornerRadius="2dp"
-    app:cardPreventCornerOverlap="false">
+    card_view:cardCornerRadius="4dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:id="@+id/image_view"
-            android:padding="0dp"
-            android:layout_margin="0dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/image_view"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:orientation="vertical"
-            android:padding="10dp"
-            android:id="@+id/container1"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_title"
-                android:text="Rasm haqida qisqacha ....."
-                android:textColor="#000"
-                android:textSize="19sp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_full_name"
-                android:text="Sanjar Karimov "
-                android:textSize="15sp"
-                android:layout_marginTop="10dp"
-                />
+            android:text="Do'stim"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#546E7A"
+            card_view:fontFamily="@font/audiowide" />
+        <TextView
+            android:id="@+id/tv_region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qayerdanligi : Buxoro viloyati Jondor tumani"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            card_view:fontFamily="@font/atomic_age" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tug'ilgan yili : 07.08.1996"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            card_view:fontFamily="@font/atomic_age" />
 
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ismi : Zubaydullo"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            card_view:fontFamily="@font/atomic_age" />
+        <TextView
+            android:id="@+id/tv_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kasbi : Talaba(zam hokim)"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            card_view:fontFamily="@font/atomic_age" />
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

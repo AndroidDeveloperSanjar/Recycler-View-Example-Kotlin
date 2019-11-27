@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
     private fun initRecyclerView(){
         recycler_view.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
-            val topSpacingItemDecoration = TopSpacingItemDecoration(30)
-            addItemDecoration(topSpacingItemDecoration)
             mainAdapter = MainRecyclerViewAdapter()
             adapter = mainAdapter
         }

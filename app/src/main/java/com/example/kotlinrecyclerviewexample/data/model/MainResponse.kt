@@ -1,16 +1,17 @@
 package com.example.kotlinrecyclerviewexample.data.model
 
 data class MainResponse(
-    var title: String,
+    var type: String,
 
-    var body: String,
+    var region: String,
 
-    var image: String,
+    var year: String,
 
-    var username: String
+    var name: String,
 
+    var work: String
 ){
     override fun toString(): String {
-        return "BlogPost(title='$title', image='$image', username='$username')"
+        return "BlogPost(type='$type', region='$region', year='$year' name='$name',work='$work')"
     }
 }
