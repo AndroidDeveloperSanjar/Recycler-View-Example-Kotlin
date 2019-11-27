@@ -47,11 +47,9 @@ class MainRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
         private val username = itemView.tv_full_name
 
         fun bind(mainResponse: MainResponse) {
-
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.icon_progress)
                 .error(R.drawable.icon_progress)
-
             Glide.with(itemView.context)
                 .applyDefaultRequestOptions(requestOptions)
                 .load(mainResponse.image)
